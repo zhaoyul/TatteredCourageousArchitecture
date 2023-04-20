@@ -1,0 +1,14 @@
+run = "clojure -M main.clj"
+entrypoint = "main.clj"
+
+[nix]
+channel = "stable-21_11"
+
+[env]
+CLJ_CONFIG = "/home/runner/.clojure"
+
+[languages.clojure]
+pattern = "**/*.clj"
+
+[languages.clojure.languageServer]
+start = ["clojure-lsp"]
